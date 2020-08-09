@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>practice</title>
+   <script src="C:/Users/mhaka/OneDrive/Desktop/react/link/react.development.js"></script>
+    <script src="C:/Users/mhaka/OneDrive/Desktop/react/link/react-dom.development.js"></script>
+    <script src="C:/Users/mhaka/OneDrive/Desktop/react/link/babel.min.js"></script>
+  </head>
+  <body>
+  <div id="myId"></div>
+  <script type="text/babel">
+  function MyFun(props){
+    return(
+      <div>
+        <h1>Today's {props.tittle1} {props.tittle2}</h1>
+      </div>
+    
+    )
+  }
+  ReactDOM.render(
+    <MyFun tittle1="Braking News" tittle2="in Brahmanbaria" />,
+    document.getElementById('myId')
+  )
+  </script>
+  </body>
+</html>
