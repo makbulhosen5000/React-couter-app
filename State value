@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <!-- <script src="https://unpkg.com/react@16/umd/react.development.js"></script> -->
+    <script src="C:/Users/mhaka/OneDrive/Desktop/react/link/react.development.js"></script>
+    <!-- <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> -->
+    <script src="C:/Users/mhaka/OneDrive/Desktop/react/link/react-dom.development.js"></script>
+    
+    <!-- Don't use this in production: -->
+    <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+    <script src="C:/Users/mhaka/OneDrive/Desktop/react/link/babel.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    class HotNews extends React.Component{
+      constructor(props) {
+    super(props);
+    this.state = {
+      TotalEditClick:0
+    };
+  }
+    edit(){
+      alert("Edit button clicked");
+      this.setState({TotalEditClick:this.state.TotalEditClick+1});
+    }
+    delete(){
+      alert("Delete button clicked");
+    }
+      render(){
+        const props=this.props;
+        const TotalClick=this.state.TotalEditClick;
+        return(
+          <div className="newsContainer">
+            <h3>{props.children}</h3>
+            <div className="action">
+              <button className="edit" onClick={()=>this.edit()}>Edit</button>
+              
+              <button className="delete" onClick={this.delete}>Delete</button>
+              
+            </div>
+           
+            {!!TotalClick && (<p>Total Edit Clicked {TotalClick}</p>)}
+          </div>
+          
+        )
+      }
+    }
+    ReactDOM.render(
+        <div className="container">
+          <div>
+            <HotNews>Today's hot news.</HotNews>
+            <HotNews>Today's political news</HotNews>
+
+           </div>
+          
+          
+        </div>,
+        document.getElementById('root')
+      );
+
+    </script>
+
+
+  </body>
+</html>
