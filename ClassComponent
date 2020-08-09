@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>practice</title>
+   <script src="C:/Users/mhaka/OneDrive/Desktop/react/link/react.development.js"></script>
+    <script src="C:/Users/mhaka/OneDrive/Desktop/react/link/react-dom.development.js"></script>
+    <script src="C:/Users/mhaka/OneDrive/Desktop/react/link/babel.min.js"></script>
+  </head>
+  <body>
+   <div id="classComponent"></div>
+   <script type="text/babel">
+   class ClassComponent extends React.Component{
+     render(){
+      const props=this.props;
+       return(
+         <div>
+              <h1>Name:{props.name}. Phone:{props.phone}</h1>
+         </div>
+       )
+     }
+   }
+  ReactDOM.render(
+    <ClassComponent name="mh akash" phone="01782283171"/>,
+    document.getElementById('classComponent')
+  );
+  </script>
+  </body>
+</html>
