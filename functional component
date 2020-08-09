@@ -2,13 +2,13 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>practice</title>
+    <title>Class Component</title>
    <script src="C:/Users/mhaka/OneDrive/Desktop/react/link/react.development.js"></script>
     <script src="C:/Users/mhaka/OneDrive/Desktop/react/link/react-dom.development.js"></script>
     <script src="C:/Users/mhaka/OneDrive/Desktop/react/link/babel.min.js"></script>
   </head>
   <body>
-  <div id="myId"></div>
+  <div id="classComponent"></div>
   <script type="text/babel">
   function MyFun(props){
     return(
@@ -20,7 +20,7 @@
   }
   ReactDOM.render(
     <MyFun tittle1="Braking News" tittle2="in Brahmanbaria" />,
-    document.getElementById('myId')
+    document.getElementById('classComponent')
   )
   </script>
   </body>
