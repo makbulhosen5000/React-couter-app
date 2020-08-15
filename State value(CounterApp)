@@ -1,0 +1,31 @@
+import React, { Component } from 'react';
+import ReactDom from 'react-dom';
+
+class Counter extends Component {
+    state = {
+        counter:0,
+     }
+     IncrementFun(){
+        let counter= this.state.counter+1;
+        this.setState({
+            counter,
+        })
+     }
+     DecrementFun(){
+        let counter= this.state.counter-1;
+        this.setState({
+            counter,
+        })
+     }
+    render() {
+        return (
+            <div className="container mt-5 text-center">Counter:{this.state.counter}
+                  <div className="btn btn-success btn-lg float-left" onClick={()=>this.IncrementFun()}>+</div>
+                  <div className="btn btn-danger btn-lg float-right" onClick={()=>this.DecrementFun()}>-</div>
+            </div>
+         );
+    }
+}
+
+export default Counter;
+
